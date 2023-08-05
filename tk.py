@@ -27,7 +27,7 @@ class ColorChangeApp:
             from_=-255, to=255,
             orient=tk.HORIZONTAL,
             label="White_r",
-            command=self.apply_color_change,
+            command=apply_color_change_adapter,
             length=dial_length, width=dial_width,
             sliderlength=slider_length
         )
@@ -39,7 +39,7 @@ class ColorChangeApp:
             from_=-255, to=255,
             orient=tk.HORIZONTAL,
             label="White_g",
-            command=self.apply_color_change,
+            command=apply_color_change_adapter,
             length=dial_length, width=dial_width,
             sliderlength=slider_length
         )
@@ -51,7 +51,7 @@ class ColorChangeApp:
             from_=-255, to=255,
             orient=tk.HORIZONTAL,
             label="White_b",
-            command=self.apply_color_change,
+            command=apply_color_change_adapter,
             length=dial_length, width=dial_width,
             sliderlength=slider_length
         )
@@ -63,7 +63,7 @@ class ColorChangeApp:
             from_=-255, to=255,
             orient=tk.HORIZONTAL,
             label="Black_r",
-            command=self.apply_color_change,
+            command=apply_color_change_adapter,
             length=dial_length, width=dial_width,
             sliderlength=slider_length
         )
@@ -75,7 +75,7 @@ class ColorChangeApp:
             from_=-255, to=255,
             orient=tk.HORIZONTAL,
             label="Black_g",
-            command=self.apply_color_change,
+            command=apply_color_change_adapter,
             length=dial_length, width=dial_width,
             sliderlength=slider_length
         )
@@ -87,7 +87,7 @@ class ColorChangeApp:
             from_=-255, to=255,
             orient=tk.HORIZONTAL,
             label="Black_b",
-            command=self.apply_color_change,
+            command=apply_color_change_adapter,
             length=dial_length, width=dial_width,
             sliderlength=slider_length
         )
@@ -99,7 +99,7 @@ class ColorChangeApp:
             from_=-255, to=255,
             orient=tk.HORIZONTAL,
             label="Red_r",
-            command=self.apply_color_change,
+            command=apply_color_change_adapter,
             length=dial_length, width=dial_width,
             sliderlength=slider_length
         )
@@ -111,7 +111,7 @@ class ColorChangeApp:
             from_=-255, to=255,
             orient=tk.HORIZONTAL,
             label="Red_g",
-            command=self.apply_color_change,
+            command=apply_color_change_adapter,
             length=dial_length, width=dial_width,
             sliderlength=slider_length
         )
@@ -123,7 +123,7 @@ class ColorChangeApp:
             from_=-255, to=255,
             orient=tk.HORIZONTAL,
             label="Red_b",
-            command=self.apply_color_change,
+            command=apply_color_change_adapter,
             length=dial_length, width=dial_width,
             sliderlength=slider_length
         )
@@ -135,7 +135,7 @@ class ColorChangeApp:
             from_=-255, to=255,
             orient=tk.HORIZONTAL,
             label="Mud_r",
-            command=self.apply_color_change,
+            command=apply_color_change_adapter,
             length=dial_length, width=dial_width,
             sliderlength=slider_length
         )
@@ -147,7 +147,7 @@ class ColorChangeApp:
             from_=-255, to=255,
             orient=tk.HORIZONTAL,
             label="Mud_g",
-            command=self.apply_color_change,
+            command=apply_color_change_adapter,
             length=dial_length, width=dial_width,
             sliderlength=slider_length
         )
@@ -159,13 +159,13 @@ class ColorChangeApp:
             from_=-255, to=255,
             orient=tk.HORIZONTAL,
             label="Mud_b",
-            command=self.apply_color_change,
+            command=apply_color_change_adapter,
             length=dial_length, width=dial_width,
             sliderlength=slider_length
         )
         self.mud_b_dial.set(self.color_change_dict["mud"][5])
         self.mud_b_dial.grid(row=3, column=2)
-        # self.apply_color_change()
+        # apply_color_change()
 
         # Create the buttons
         self.white_r_decrement_btn = tk.Button(self.root, text="White_r-", command=self.decrement_white_r)
@@ -252,146 +252,148 @@ class ColorChangeApp:
     def increment_white_r(self):
         increment_amount = 5
         self.white_r_dial.set(self.white_r_dial.get() + increment_amount)
-        self.apply_color_change()
+        apply_color_change()
 
     def decrement_white_r(self):
         decrement_amount = 5
         self.white_r_dial.set(self.white_r_dial.get() + decrement_amount)
-        self.apply_color_change()
+        apply_color_change()
 
     def increment_white_g(self):
         increment_amount = 5
         self.white_g_dial.set(self.white_g_dial.get() + increment_amount)
-        self.apply_color_change()
+        apply_color_change()
 
     def decrement_white_g(self):
         decrement_amount = 5
         self.white_g_dial.set(self.white_g_dial.get() + decrement_amount)
-        self.apply_color_change()
+        apply_color_change()
 
     def increment_white_b(self):
         increment_amount = 5
         self.white_b_dial.set(self.white_b_dial.get() + increment_amount)
-        self.apply_color_change()
+        apply_color_change()
 
     def decrement_white_b(self):
         decrement_amount = 5
         self.white_b_dial.set(self.white_b_dial.get() + decrement_amount)
-        self.apply_color_change()
+        apply_color_change()
 
 
     def increment_black_r(self):
         increment_amount = 5
         self.black_r_dial.set(self.black_r_dial.get() + increment_amount)
-        self.apply_color_change()
+        apply_color_change()
 
     def decrement_black_r(self):
         decrement_amount = 5
         self.black_r_dial.set(self.black_r_dial.get() + decrement_amount)
-        self.apply_color_change()
+        apply_color_change()
 
     def increment_black_g(self):
         increment_amount = 5
         self.black_g_dial.set(self.black_g_dial.get() + increment_amount)
-        self.apply_color_change()
+        apply_color_change()
 
     def decrement_black_g(self):
         decrement_amount = 5
         self.black_g_dial.set(self.black_g_dial.get() + decrement_amount)
-        self.apply_color_change()
+        apply_color_change()
 
     def increment_black_b(self):
         increment_amount = 5
         self.black_b_dial.set(self.black_b_dial.get() + increment_amount)
-        self.apply_color_change()
+        apply_color_change()
 
     def decrement_black_b(self):
         decrement_amount = 5
         self.black_b_dial.set(self.black_b_dial.get() + decrement_amount)
-        self.apply_color_change()
+        apply_color_change()
 
 
     def increment_red_r(self):
         increment_amount = 5
         self.red_r_dial.set(self.red_r_dial.get() + increment_amount)
-        self.apply_color_change()
+        apply_color_change()
 
     def decrement_red_r(self):
         decrement_amount = 5
         self.red_r_dial.set(self.red_r_dial.get() + decrement_amount)
-        self.apply_color_change()
+        apply_color_change()
 
     def increment_red_g(self):
         increment_amount = 5
         self.red_g_dial.set(self.red_g_dial.get() + increment_amount)
-        self.apply_color_change()
+        apply_color_change()
 
     def decrement_red_g(self):
         decrement_amount = 5
         self.red_g_dial.set(self.red_g_dial.get() + decrement_amount)
-        self.apply_color_change()
+        apply_color_change()
 
     def increment_red_b(self):
         increment_amount = 5
         self.red_b_dial.set(self.red_b_dial.get() + increment_amount)
-        self.apply_color_change()
+        apply_color_change()
 
     def decrement_red_b(self):
         decrement_amount = 5
         self.red_b_dial.set(self.red_b_dial.get() + decrement_amount)
-        self.apply_color_change()
+        apply_color_change()
 
     def increment_mud_r(self):
         increment_amount = 5
         self.mud_r_dial.set(self.mud_r_dial.get() + increment_amount)
-        self.apply_color_change()
+        apply_color_change()
 
     def decrement_mud_r(self):
         decrement_amount = 5
         self.mud_r_dial.set(self.mud_r_dial.get() + decrement_amount)
-        self.apply_color_change()
+        apply_color_change()
 
     def increment_mud_g(self):
         increment_amount = 5
         self.mud_g_dial.set(self.mud_g_dial.get() + increment_amount)
-        self.apply_color_change()
+        apply_color_change()
 
     def decrement_mud_g(self):
         decrement_amount = 5
         self.mud_g_dial.set(self.mud_g_dial.get() + decrement_amount)
-        self.apply_color_change()
+        apply_color_change()
 
     def increment_mud_b(self):
         increment_amount = 5
         self.mud_b_dial.set(self.mud_b_dial.get() + increment_amount)
-        self.apply_color_change()
+        apply_color_change()
 
     def decrement_mud_b(self):
         decrement_amount = 5
         self.mud_b_dial.set(self.mud_b_dial.get() + decrement_amount)
-        self.apply_color_change()
+        apply_color_change()
 
 
 
-    def apply_color_change(self, temp):
+def apply_color_change_adapter(temp):
+    apply_color_change()
 
-        def remove_grid_and_invert(image_path):
+def apply_color_change():
 
-            remove_grid_dict = {
-                '"#0A0D18"': '"RGB(0, 0, 0)"',
-            }
+    def remove_grid_and_invert(image_path):
+        remove_grid_dict = {
+            '"#0A0D18"': '"RGB(0, 0, 0)"',
+        }
 
-            def recolor_one_image(image_path):
-                for original, desired in remove_grid_dict.items():
-                    target_path = '/home/caffeinemachine/Desktop/1Processing/TK/mod.png'
-                    remove_grid_command = f'convert {image_path} -fill {desired} -fuzz 15% -opaque {original} {target_path}'
-                    invert_command = f'convert {image_path} -negate {target_path}'
-                    os.system(remove_grid_command)
-                    os.system(invert_command)
+        def recolor_one_image(image_path):
+            for original, desired in remove_grid_dict.items():
+                target_path = '/home/caffeinemachine/Desktop/1Processing/TK/mod.png'
+                remove_grid_command = f'convert {image_path} -fill {desired} -fuzz 15% -opaque {original} {target_path}'
+                invert_command = f'convert {image_path} -negate {target_path}'
+                os.system(remove_grid_command)
+                os.system(invert_command)
 
-            recolor_one_image(image_path)
+        recolor_one_image(image_path)
 
-        remove_grid_and_invert('/home/caffeinemachine/Desktop/1Processing/TK/2.png')
+    remove_grid_and_invert('/home/caffeinemachine/Desktop/1Processing/TK/2.png')
 
 
 def main():
